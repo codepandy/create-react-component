@@ -119,7 +119,13 @@ program
               installDependenciesSpinner.start();
               shell.exec(
                 `cd ${name}
-              npm i`,
+                 npm i
+                 git init
+                 git add .
+                 git commit -am "init code"
+                 git remote add origin ${repository}
+                 git push -u origin master
+              `,
                 error => {
                   if (error) {
                     installDependenciesSpinner.fail(chalk.red(`依赖安装失败：${error}`));
