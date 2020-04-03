@@ -124,7 +124,9 @@ program
                   if (error) {
                     installDependenciesSpinner.fail(chalk.red(`依赖安装失败：${error}`));
                   }
-                  installDependenciesSpinner.succeed(chalk.green("依赖安装完成"));
+                  installDependenciesSpinner.succeed(
+                    chalk.green("依赖安装完成，开始开发你的组件吧！"),
+                  );
                 },
               );
             },
