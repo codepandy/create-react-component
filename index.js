@@ -92,7 +92,7 @@ program
                 };
 
                 fs.writeFileSync(packagePath, JSON.stringify(packageJson));
-                packageSpinner.succeed("package.json文件配置成功！");
+                packageSpinner.succeed(chalk.green("package.json文件配置成功！"));
               } catch (error) {
                 console.log(symbols.error, error);
                 packageSpinner.fail(chalk.red("文件配置失败！"));
@@ -120,19 +120,38 @@ program
               shell.exec(
                 `cd ${name}
                  npm i
-                 git init
-                 git add .
-                 git commit -am "init code"
-                 git remote add origin ${repository}
-                 git push -u origin master
               `,
                 error => {
                   if (error) {
                     installDependenciesSpinner.fail(chalk.red(`依赖安装失败：${error}`));
                   }
-                  installDependenciesSpinner.succeed(
-                    chalk.green("依赖安装完成，开始开发你的组件吧！"),
-                  );
+                  installDependenciesSpinner.succeed(chalk.green("依赖安装完成！"));
+                  const gitSpinner = ora(chalk.green(`开始设置git...`));
+                  gitSpinner.start();
+                  console.log(chalk.green(repository));
+                  if (repository) {
+                    shell.exec(
+                      `
+                      cd ${name}
+                      pwd
+                      git init
+                      git add .
+                      git commit -am "init code"
+                      git status
+                      git remote add origin ${repository}
+                      git push -u origin master
+                    `,
+                      gitError => {
+                        if (gitError) {
+                          gitSpinner.fail(chalk.red(`git设置失败：${error}`));
+                          console.log(
+                            chalk.red("创建的仓库，仓库中不要有任何文件，或检查仓库是否登录。"),
+                          );
+                        }
+                        gitSpinner.succeed(chalk.green("git关联完成，开始开发你的组件吧！"));
+                      },
+                    );
+                  }
                 },
               );
             },
