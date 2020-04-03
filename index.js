@@ -9,7 +9,7 @@ const ejs = require("ejs"); //修改模版文件内容
 const ora = require("ora"); //优雅的终端转轮，就是loading，提示进行中
 const inquirer = require("inquirer"); //公共交互式命令行用户界面的集合。就是询问时输入
 const shell = require("shelljs");
-const isEnglish = /^[a-zA-Z]+\d*$/gi; //检查文件名是否是英文，只支持英文
+const isEnglish = /^[a-zA-Z][0-9a-zA-Z\-]*$/gi; //检查文件名是否是英文，只支持英文
 
 const package = require("./package.json");
 
