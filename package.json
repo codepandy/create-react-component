@@ -1,6 +1,6 @@
 {
   "name": "@wenmu/create-react-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "一个创建react组件的脚手架命令行工具CLI",
   "bin": {
     "c-rc-c": "index.js"
