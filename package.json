@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "pub": "npm publish"
+    "pub": "npm publish --access=public"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-npm install -g create-react-component
+npm install -g @wenmu/create-react-component
 ```
 
 ## 初始化项目
