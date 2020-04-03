@@ -1,0 +1,34 @@
+{
+  "name": "create-react-component",
+  "version": "1.0.0",
+  "description": "一个创建react组件的脚手架命令行工具CLI",
+  "bin": {
+    "c-rc-c": "index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "pub": "npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codepandy/create-react-component.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codepandy/create-react-component/issues"
+  },
+  "homepage": "https://github.com/codepandy/create-react-component#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^5.0.0",
+    "download-git-repo": "^3.0.2",
+    "ejs": "^3.0.2",
+    "handlebars": "^4.7.3",
+    "inquirer": "^7.1.0",
+    "log-symbols": "^3.0.0",
+    "ora": "^4.0.3",
+    "shelljs": "^0.8.3"
+  }
+}
