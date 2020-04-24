@@ -1,6 +1,6 @@
 {
   "name": "@wenmu/create-react-component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "一个创建react组件的脚手架命令行工具CLI",
   "bin": {
     "c-rc-c": "index.js"
@@ -13,7 +13,14 @@
     "type": "git",
     "url": "git+https://github.com/codepandy/create-react-component.git"
   },
-  "keywords": [],
+  "keywords": [
+    "create-react-component",
+    "react-component",
+    "rc-component",
+    "create-rc-component",
+    "component",
+    "react-component"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {

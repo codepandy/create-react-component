@@ -1,6 +1,6 @@
 # create-react-component
 
-一个创建 react 组件的脚手架命令行工具 CLI
+一个创建 react 组件的脚手架命令行工具 CLI，创建的组件已做浏览器兼容。
 
 ## 安装
 
