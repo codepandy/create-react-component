@@ -8,6 +8,12 @@
 npm install -g @wenmu/create-react-component
 ```
 
+## 查看是否安装成功
+
+```bash
+c-rc-c -v
+```
+
 ## 初始化项目
 
 ```bash

@@ -1,6 +1,6 @@
 {
   "name": "@wenmu/create-react-component",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "一个创建react组件的脚手架命令行工具CLI",
   "bin": {
     "c-rc-c": "index.js"
@@ -21,7 +21,7 @@
     "component",
     "react-component"
   ],
-  "author": "",
+  "author": "wenmu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/codepandy/create-react-component/issues"
@@ -32,7 +32,7 @@
     "commander": "^5.0.0",
     "download-git-repo": "^3.0.2",
     "ejs": "^3.0.2",
-    "handlebars": "^4.7.3",
+    "handlebars": "^4.7.6",
     "inquirer": "^7.1.0",
     "log-symbols": "^3.0.0",
     "ora": "^4.0.3",

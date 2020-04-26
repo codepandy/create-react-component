@@ -126,10 +126,11 @@ program
                     installDependenciesSpinner.fail(chalk.red(`依赖安装失败：${error}`));
                   }
                   installDependenciesSpinner.succeed(chalk.green("依赖安装完成！"));
-                  const gitSpinner = ora(chalk.green(`开始设置git...`));
-                  gitSpinner.start();
+
                   console.log(chalk.green(repository));
                   if (repository) {
+                    const gitSpinner = ora(chalk.green(`开始设置git...`));
+                    gitSpinner.start();
                     shell.exec(
                       `
                       cd ${name}
